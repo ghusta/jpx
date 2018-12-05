@@ -40,6 +40,7 @@ import static io.jenetics.jpx.format.LocationFormatter.ISO_SHORT;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -60,6 +61,7 @@ public class LocationFormatterTest {
 		final Location location,
 		final String format
 	) {
+		Locale.setDefault(Locale.US);
 		Assert.assertEquals(formatter.format(location), format);
 	}
 
